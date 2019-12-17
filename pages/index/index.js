@@ -6,9 +6,11 @@ Page({
   data: {
     img_width: 0,
     img_height: 0,
+
   },
 
   onLoad: function () {
+    wx.hideTabBar()
     let that = this
     wx.getSystemInfo({ // 获取系统信息
       success(res) {
@@ -28,10 +30,20 @@ Page({
               img_height: w / w_h,
             })
             console.log(that.data.img_height)
+            setTimeout(function(){
+              wx.showTabBar({
+                animation: true,
+              })
+            },500)
+            
           }
         })
       }
     })
+
+    
+
+    
     
   },
   onShareAppMessage: function (e) {
