@@ -12,7 +12,7 @@
     justify-content: space-around;
     box-sizing: border-box;
     width:100%;
-    padding: 50px 15px 100px;
+    padding: 100px 15px 80px;
     background-color:rgba(194,194,194,0.5);
 }
 .content {

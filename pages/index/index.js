@@ -7,11 +7,16 @@ Page({
     img_width: 0,
     img_height: 0,
     windowHeight: 0, // 设备可是区域高度
+    nav_top: 30,
   },
 
   onLoad: function () {
 
     let that = this
+
+    that.setData({
+      nav_top: app.globalData.statusBar
+    })
     wx.getSystemInfo({ // 获取系统信息
       success(res) {
         console.log(res)
