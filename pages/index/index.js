@@ -6,17 +6,19 @@ Page({
   data: {
     img_width: 0,
     img_height: 0,
-
+    windowHeight: 0, // 设备可是区域高度
   },
 
   onLoad: function () {
-    wx.hideTabBar()
+
     let that = this
     wx.getSystemInfo({ // 获取系统信息
       success(res) {
         console.log(res)
         let w = res.windowWidth
-
+        that.setData({
+          windowHeight: res.windowHeight
+        })
         wx.getImageInfo({ // 优先对图片的宽高进行判断。长款相等就不裁切
           src: '../../img/bg_kv02.jpg',
           success(res) {
@@ -29,12 +31,6 @@ Page({
               img_width: w,
               img_height: w / w_h,
             })
-            console.log(that.data.img_height)
-            setTimeout(function(){
-              wx.showTabBar({
-                animation: true,
-              })
-            },500)
             
           }
         })
@@ -49,9 +45,14 @@ Page({
   onShareAppMessage: function (e) {
     return {
       title: "四月是你的谎言",
-      path: '/pages/index/index',
+      path: '/pages/animation/animation',
       imageUrl: "../../img/sh_share.png"
     }
   },
+  goMycenter:function(){
+    wx.navigateTo({
+      url: '../mycenter/mycenter',
+    })
+  }
   
 })

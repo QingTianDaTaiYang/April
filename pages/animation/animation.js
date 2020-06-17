@@ -13,7 +13,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.hideTabBar()
+
     let that = this
     setTimeout(function () {
       // 图标动画部分
@@ -23,12 +23,6 @@ Page({
       })
       this.animation = animation
       animation.opacity(1).step();
-      // setTimeout(function () {
-      //   animation.opacity(1).step();
-      //   that.setData({
-      //     animation: animation.export()
-      //   })
-      // }, 2000)
 
       setTimeout(function () {
         animation.opacity(0).step();
@@ -40,7 +34,10 @@ Page({
           that.setData({
             mask: false,
           })
-          wx.switchTab({
+          // wx.switchTab({
+          //   url: '../index/index'
+          // })
+          wx.reLaunch({
             url: '../index/index'
           })
         }, 1500)

@@ -1,6 +1,49 @@
 <!--首页-->
+<view style="position:fixed;top:0;left:0;z-index:1;width:100vw;height:100vh;overflow:hidden;">
+    <!-- <image style="width:{{img_width}}px;height:{{img_height}}px;" src="../../img/bg_kv02.jpg"></image> -->
+    <image style="width:100%;" mode='widthFix' src="../../img/bg_kv02.jpg"></image>
+</view>
+<image src="../../img/sh_logo.png" style="position:fixed;top:45px;left:15px;z-index:10;width:225px;height:65px;"></image>
 
-<image style="width:{{img_width}}px;height:{{img_height}}px;" src="../../img/bg_kv02.jpg"></image>
+<!-- 内容 -->
+<view class="content-box">
+    <view style="width:100%;height:{{windowHeight - 100}}px;"></view>
+    <view class="content-son-box" style="height:{{windowHeight}}px;">
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
+        <view class="content" bindtap="goMycenter">
+            <image class="content-img" src="../../img/sh_share.png"></image>
+            <view class="content-text">我的</view>
+        </view>
 
-<image src="../../img/sh_logo.png" style="position:fixed;top:45px;left:15px;width:225px;height:65px;"></image>
+    </view>
+    
+</view>
+    
 

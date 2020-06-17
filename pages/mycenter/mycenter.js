@@ -1,4 +1,4 @@
-// pages/mycenter/mycenter.js
+// 我的
 Page({
 
   /**
